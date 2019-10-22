@@ -2,3 +2,6 @@
 fxrnn.code-workspace
 web_system/run.sh~
 web_system/.run.sh.un~
+pvenv/lib64
+pvenv/bin/python
+pvenv/bin/python3
