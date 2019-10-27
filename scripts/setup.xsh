@@ -3,6 +3,7 @@ mkdir webenv
 python3 -m venv webenv
 source webenv/bin/activate
 pip3 install Flask Flask-JWT
+pip3 install Flask-Bootstrap
 
 # mongodb
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
