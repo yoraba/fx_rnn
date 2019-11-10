@@ -1,7 +1,7 @@
 # Flask
-mkdir webenv
-python3 -m venv webenv
-source webenv/bin/activate
+mkdir pvenv
+python3 -m venv pvenv
+source pvenv/bin/activate
 pip3 install Flask Flask-JWT
 pip3 install Flask-Bootstrap
 
@@ -57,3 +57,5 @@ pip3 install TA-Lib
 pip3 install pandas numpy matplotlib
 pip3 install tensorflow keras
 pip3 install mongoengine
+pip3 install pycrypto
+pip3 install quandl

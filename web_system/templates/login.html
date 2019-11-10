@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-</body>
-</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+{% extends "base.html" %} {# 親テンプレートを指定 #}
+     
+{% block title %}Login{% endblock %}
+ 
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+         
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Login</h1>
+        </div>
+        <div class="page-body">
+            <p class="important">
+                Please enter password.
+            </p>
+            <form>
+              <div class="form-group">
+                <label for="formGroupPassword">Password</label>
+                <input id="formGroupPassword"
+                       data-toggle="password"
+                       class="form-control"
+                       type="password"
+                       maxlength="10"
+                       placeholder="Enter the password"/>
+                  <button type="submit">ログイン</button>
+              </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

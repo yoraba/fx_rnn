@@ -2,18 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6c7aae-1731-4277-b5f5-ea038f7d0127" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web_system/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/prediction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/quandl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/talib.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/keras_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/logic_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/login_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/mongo_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/quandl_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/api/ta_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/config/encrypted.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/config/general.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/config_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/data/config_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/data/indicative_document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/db_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/plot_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/quandl_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back_system/shared.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/ai/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/ai/keras_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/db/mongoengine_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/abc_crypto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/aes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/aop_printer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/aspect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylib/logic/dataclass_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/aop_unittest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/dataclass.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/encdectest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/test_AOPPrinter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/test_aes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/test_dataclass_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/test_mongoengine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_system/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fx_rnn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fx_rnn.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/setup.xsh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.xsh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_system/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/sample_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/sample_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_system/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +56,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="fx_rnn" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -47,15 +85,21 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_system" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/back_system" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web_system/models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web_system" />
+      <recent name="$PROJECT_DIR$/back_system" />
+      <recent name="$PROJECT_DIR$/mylib/logic" />
+      <recent name="$PROJECT_DIR$/unittests" />
+      <recent name="$PROJECT_DIR$/mylib/db" />
+      <recent name="$PROJECT_DIR$/back_system/bin/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/back_system/api" />
+      <recent name="$PROJECT_DIR$/back_system" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web_system/models" />
     </key>
   </component>
@@ -70,6 +114,57 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for unittests.test_dataclass_serializer.MyTestCase.test_deserialize">
+    <configuration name="Unittests for test_dataclass_serializer.MyTestCase.test_deserialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fx_rnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unittests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_dataclass_serializer.MyTestCase.test_deserialize&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for unittests.test_aes.MyTestCase.test_dec_file" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fx_rnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;unittests.test_aes.MyTestCase.test_dec_file&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for unittests.test_dataclass_serializer.MyTestCase.test_deserialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="fx_rnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;unittests.test_dataclass_serializer.MyTestCase.test_deserialize&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for unittests.test_dataclass_serializer.MyTestCase.test_deserialize" />
+        <item itemvalue="Python tests.Unittests for test_dataclass_serializer.MyTestCase.test_deserialize" />
+        <item itemvalue="Python tests.Unittests for unittests.test_aes.MyTestCase.test_dec_file" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
