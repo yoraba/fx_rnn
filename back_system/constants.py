@@ -1,10 +1,7 @@
 class Constants:
-    BIN_DIR = './bin/'
-    CONFIG_DIR = BIN_DIR + 'config/'
-    DAT_DIR = BIN_DIR + 'dat/'
-    LOG_DIR = BIN_DIR + 'log/'
+    CONFIG_DIR = '../back_system/config/'
     GENERAL_CONFIG_PATH = CONFIG_DIR + 'general.config'
-    ENCRYPTED_CONFIG_PATH = CONFIG_DIR + 'encrypted.config'
+    ENCRYPTED_CONFIG_PATH = CONFIG_DIR + 'encrypted.config.bak'
 
     QC_INDICATIVE = {
        "USDJPY": "BOE/XUDLJYD",

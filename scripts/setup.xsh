@@ -2,8 +2,7 @@
 mkdir pvenv
 python3 -m venv pvenv
 source pvenv/bin/activate
-pip3 install Flask Flask-JWT
-pip3 install Flask-Bootstrap
+pip3 install Flask Flask-JWT flask_login
 
 # mongodb
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -

@@ -20,3 +20,14 @@ class DocumentWrapper(Document):
             del item_dict['_cls']
             result = result.append(pd.DataFrame(item_dict, index=[idx]))
         return result
+
+
+    @classmethod
+    def docs2dict(cls):
+        result = []
+        for idx, item in enumerate(cls.objects):
+            itemdict = item.to_mongo()
+            del itemdict['_id']
+            del itemdict['_cls']
+            result.append(itemdict)
+        return result

@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/>
+<style type="text/css">
+<!--
+.form-inline {flex-direction: column;}
+-->
+</style>
+{% endblock %}
+{% block body %}
+{{ super() }}
+    <div class="container">
+        <table id="main-table" class="table table-bordered">
+            <thead>
+            <tr>
+            {% for i in range(columnCount) %}
+                <th>
+                    {{i}}
+                </th>
+            {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for col in row %}
+                        <td>{{ col }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+    <script>
+        jQuery(function($){
+            $("#main-table").DataTable({
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                info: true,
+                paging: true,
+                scrollX: 400,
+                scrollY: 200
+            });
+        });
+    </script>
+{% endblock %}

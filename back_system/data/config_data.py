@@ -4,6 +4,7 @@ from datetime import datetime
 @dataclass
 class GeneralConfig:
     start_date: str = '1970-1-1'
+    target_price: str = 'USDJPY'
 
 @dataclass
 class EncryptedConfig:

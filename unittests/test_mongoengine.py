@@ -1,5 +1,5 @@
 import unittest
-from mylib.db.mongoengine_manager import *
+from mylib.db.mongoengine_wrapper import *
 
 
 class DummyDocument(DocumentWrapper):

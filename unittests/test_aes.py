@@ -6,7 +6,8 @@ from .aop_unittest import AOPUnitTest
 
 
 class MyTestCase(unittest.TestCase):
-    TEST_FILE_PATH = './dat/encdectest.json'
+    # TEST_FILE_PATH = './dat/encdectest.json'
+    TEST_FILE_PATH = 'back_system/config/encrypted.config.bak'
 
     @AOPUnitTest()
     def test_encrypt_decrypt(self):
