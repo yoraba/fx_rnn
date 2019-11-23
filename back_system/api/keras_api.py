@@ -1,27 +1,46 @@
-# from keras.models import Sequential
-# from keras.layers import Dense, Activation
-from back_system.shared import SharedLogic
-from back_system.quandl_manager import QuandlManager
+from back_system.shared import SharedContext
+from back_system.api.ta_api import TAlib_API
+from back_system.constants import Constants
+from mylib.ai.keras_wrapper import RNNContext, RNNWrapper
+from mylib.logic.talib_wrapper import TAlibWrapper
 import numpy as np
 
 
-class IndicateDenceModel:
-    def create_dataset(self, objective, term, test_rate=0.3):
-        df = QuandlManager().get_indicative_histoty()
-        df = df.set_index(['Date'])
-        y = df.iloc[term:].loc[:, objective].values
-        X = []
-        mean, std = df.mean(axis=0), df.std(axis=0)
-        standardized = (df - mean) / std
-        for i in range(0, len(df)-term):
-            work = standardized.iloc[i: i+term].values.flatten()
-            X.append(work)
-        print(f"y shape:{np.shape(y)} x shape:{np.shape(X)}")
+class KerasAPI:
 
+    def __init__(self, context: SharedContext):
+        self._context = context
+        rnn_context = RNNContext()
+        rnn_context.window_size = context.Config.General.window_size
+        rnn_context.tensor_board_dir = Constants.TENSOR_BOARD_DIR
+        rnn_context.model_dir = Constants.MODEL_DIR
+        self.rnn_wrapper = RNNWrapper(rnn_context)
 
-if __name__ == "__main__":
-    SharedLogic.initialize('1234')
-    SharedLogic.initialize_config()
-    SharedLogic.initialize_db()
-    idm = IndicateDenceModel()
-    idm.create_dataset('GBPJPY', 14)
+    def create_data(self):
+        api = TAlib_API(self._context)
+        data = api.get_technicals()
+        data = self.rnn_wrapper.preprocess(data)
+        data = TAlibWrapper().add_high_low_data(data)
+        Xall, yall = self.rnn_wrapper.make_data_and_label(data)
+        partition = round(len(yall) * 0.7)
+        Xtrain, ytrain = Xall[:partition], yall[:partition]
+        Xtest, ytest = Xall[partition:], yall[:partition]
+        return Xall, yall, Xtrain, ytrain, Xtest, ytest
+
+    def fit(self):
+        (Xall, yall, Xtrain, ytrain, Xtest, ytest) = self.create_data()
+        model = self.rnn_wrapper.create_basic_lstm_model(Xtrain)
+        result = self.rnn_wrapper.fit(model, Xtrain, ytrain)
+        self.rnn_wrapper.save2file(result)
+
+    def predict(self):
+        self.fit()
+        model = self.rnn_wrapper.loadModelFfile()
+        (Xall, yall, Xtrain, ytrain, Xtest, ytest) = self.create_data()
+        prediction = model.predict(Xall)
+        high_row_score = []
+        for i in range(np.shape(yall)[1]):
+            match = self.rnn_wrapper.high_low_probability_score(yall, prediction, i)
+            high_row_score.append(match / len(yall))
+        return high_row_score
+

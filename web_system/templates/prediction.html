@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+{{ super() }}
+    <div class="container">
+        <h2>Create model and fit and predict</h2>
+        <p>
+            <a name="predict" id="predict" class="btn btn-primary" href="/prediction/predict" role="button">Predict</a>
+            <h3>Correct answer rate(high low)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i, v in hl_score %}
+                            <tr>
+                                <td>{{ i }}</td>
+                                <td>{{ v }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            <h3>Graph</h3>
+        </p>
+    </div>
+{% endblock %}

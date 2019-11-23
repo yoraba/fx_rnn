@@ -58,3 +58,4 @@ pip3 install tensorflow keras
 pip3 install mongoengine
 pip3 install pycrypto
 pip3 install quandl
+pip3 install scikit-learn

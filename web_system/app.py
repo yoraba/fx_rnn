@@ -9,6 +9,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from back_system.api.quandl_api import QuandlAPI
 from back_system.api.ta_api import TAlib_API
+from back_system.api.keras_api import KerasAPI
 
 
 app = Flask(__name__)
@@ -86,6 +87,21 @@ def talib():
     return render_template('talib.html', data=answer, columnCount=np.shape(answer)[1])
 
 
+@app.route('/prediction', methods=['GET', 'POST'])
+@login_required
+def prediction():
+    return render_template('prediction.html')
+
+
+@app.route('/prediction/predict', methods=['GET', 'POST'])
+@login_required
+def prediction_predict():
+    context = LoginModel().get_context(session['password'])
+    api = KerasAPI(context)
+    hl_score = api.predict()
+    return render_template('prediction.html', hl_score=enumerate(hl_score))
+
+
 @app.route('/sampleplot')
 def sample_plot():
     data = SampleModel().get_dummy_graph()
@@ -96,6 +112,6 @@ def sample_plot():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(threaded=False)
 
 
