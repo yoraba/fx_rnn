@@ -2,32 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6c7aae-1731-4277-b5f5-ea038f7d0127" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/unittests/dat/USDJPY1440.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/test_talib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/models/login_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/models/shared_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/datatables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_system/templates/top.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574347187.ky-dynabook-R63-D.13317.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574347982.ky-dynabook-R63-D.14065.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574350246.ky-dynabook-R63-D.17009.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574350899.ky-dynabook-R63-D.17716.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574354252.ky-dynabook-R63-D.21322.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574354490.ky-dynabook-R63-D.21727.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/events.out.tfevents.1574355003.ky-dynabook-R63-D.22249.1855.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-21_23-39-48/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-21_23-53-04/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-22_00-30-47/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-22_00-41-39/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-22_01-37-32/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-22_01-41-31/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/train/plugins/profile/2019-11-22_01-50-07/local.trace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574347190.ky-dynabook-R63-D.13317.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574347985.ky-dynabook-R63-D.14065.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574350247.ky-dynabook-R63-D.17009.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574350899.ky-dynabook-R63-D.17716.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574354252.ky-dynabook-R63-D.21322.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574354493.ky-dynabook-R63-D.21727.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/dat/tensorboard/validation/events.out.tfevents.1574355011.ky-dynabook-R63-D.22249.1970.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/test_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_system/api/login_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/api/login_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_system/api/mongo_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/logic/talib_wrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_system/api/quandl_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/api/quandl_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_system/api/ta_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/api/ta_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_system/api/keras_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/api/keras_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_system/config/general.config" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/config/general.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_system/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back_system/data/config_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_system/data/config_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_system/quandl_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylib/db/mongoengine_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/db/mongoengine_wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/ai/keras_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/ai/keras_wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib/logic/talib_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/mylib/logic/talib_wrapper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/setup.xsh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.xsh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/test_aes.py" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/test_aes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/test_mongoengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/test_mongoengine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_system/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_system/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/templates/quandl.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/quandl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_system/templates/talib.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/talib.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_system/templates/prediction.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_system/templates/prediction.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +69,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1SkMjDxFcACIvSxWmbFilE9ZyWd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/unittests/dat" />
@@ -94,8 +106,50 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for unittests.test_talib.MyTestCase.test_technicals">
-    <configuration name="Unittests for unittests.test_aes.MyTestCase.test_enc_file" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for unittests.test_keras.RNNTestCase.test_predict">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fx_rnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_system" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_system/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="keras_api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fx_rnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/back_system/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/back_system/api/keras_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for unittests.test_keras.RNNTestCase.test_fit" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="fx_rnn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +159,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unittests.test_aes.MyTestCase.test_enc_file&quot;" />
+      <option name="_new_target" value="&quot;unittests.test_keras.RNNTestCase.test_fit&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for unittests.test_dataclass_serializer.MyTestCase.test_deserialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for unittests.test_keras.RNNTestCase.test_high_low_probability" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="fx_rnn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,11 +173,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unittests.test_dataclass_serializer.MyTestCase.test_deserialize&quot;" />
+      <option name="_new_target" value="&quot;unittests.test_keras.RNNTestCase.test_high_low_probability&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for unittests.test_talib.MyTestCase.test_serialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for unittests.test_keras.RNNTestCase.test_predict" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="fx_rnn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,45 +187,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unittests.test_talib.MyTestCase.test_serialize&quot;" />
+      <option name="_new_target" value="&quot;unittests.test_keras.RNNTestCase.test_predict&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for unittests.test_talib.MyTestCase.test_technicals" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="fx_rnn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unittests.test_talib.MyTestCase.test_technicals&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_talib.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="fx_rnn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/unittests/test_talib.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for unittests.test_talib.MyTestCase.test_technicals" />
-        <item itemvalue="Python tests.Unittests in test_talib.py" />
-        <item itemvalue="Python tests.Unittests for unittests.test_talib.MyTestCase.test_serialize" />
-        <item itemvalue="Python tests.Unittests for unittests.test_aes.MyTestCase.test_enc_file" />
-        <item itemvalue="Python tests.Unittests for unittests.test_dataclass_serializer.MyTestCase.test_deserialize" />
+        <item itemvalue="Python tests.Unittests for unittests.test_keras.RNNTestCase.test_predict" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.keras_api" />
+        <item itemvalue="Python tests.Unittests for unittests.test_keras.RNNTestCase.test_high_low_probability" />
+        <item itemvalue="Python tests.Unittests for unittests.test_keras.RNNTestCase.test_fit" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573351220070</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="technical analyse">
+      <created>1574011366616</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574011366616</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +243,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add back system" />
-    <option name="LAST_COMMIT_MESSAGE" value="add back system" />
+    <MESSAGE value="technical analyse" />
+    <option name="LAST_COMMIT_MESSAGE" value="technical analyse" />
   </component>
 </project>
