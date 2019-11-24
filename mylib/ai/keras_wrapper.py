@@ -1,5 +1,6 @@
 import os
 import keras
+import matplotlib.pyplot as plt
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 import numpy as np
@@ -41,6 +42,7 @@ class KerasWrapper(metaclass=ABCMeta):
             f.write(model_json)
         model.save_weights(os.path.join(self.context.model_dir, self.context.weight_name))
 
+
     def loadModelFfile(self):
         with open(os.path.join(self.context.model_dir, self.context.model_name)) as f:
             model_json = f.read()
@@ -52,10 +54,23 @@ class KerasWrapper(metaclass=ABCMeta):
         model.load_weights(os.path.join(self.context.model_dir, self.context.weight_name))
         return model
 
+    def plot2image(self, buffer, dim= 0):
+        import tensorflow as tf
+        image = tf.image.decode_png(buffer.getvalue(), channels=4)
+        image = tf.expand_dims(image, dim)
+        return image
+
+    def add_image2board(self, name, image, step=0):
+        import tensorflow as tf
+        writer = tf.summary.create_file_writer(self.context.tensor_board_dir)
+        with writer.as_default():
+            tf.summary.image(name, image, step=step)
+            writer.flush()
+
 
 @dataclass()
 class RNNContext(KerasContext):
-    window_size = 365
+    window_size = 14
 
 
 class RNNWrapper(KerasWrapper):
@@ -120,7 +135,7 @@ class RNNWrapper(KerasWrapper):
         for i, v in enumerate(answer[1:]):
             li = i - 1
             la, ca = answer[li, index], v[index]
-            lp, cp = prediction[li, index], prediction[i, index]
+            lp, cp = prediction[li, index], prediction[i-1, index]
             ans = highlow(la, ca)
             pred = highlow(lp, cp)
             if ans == pred:
@@ -136,6 +151,20 @@ class RNNWrapper(KerasWrapper):
             if ans == pred:
                 match += 1
         return match
+
+    def high_low_probavility_score_with_border(self, answer, prediction, index=0, high=0.7, low=0.3):
+        highlow = lambda x: 1 if x > high else -1 if x < low else 0
+        match, total = 0, 0
+        for i, v in enumerate(answer[1:]):
+            ans = highlow(answer[i, index])
+            pred = highlow(prediction[i, index])
+            if pred == 0:
+                continue
+            if ans == pred:
+                match += 1
+            total += 1
+        return match, total
+
 
 
 

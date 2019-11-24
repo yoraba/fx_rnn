@@ -34,13 +34,35 @@ class KerasAPI:
         self.rnn_wrapper.save2file(result)
 
     def predict(self):
-        self.fit()
+        #self.fit()
         model = self.rnn_wrapper.loadModelFfile()
         (Xall, yall, Xtrain, ytrain, Xtest, ytest) = self.create_data()
         prediction = model.predict(Xall)
         high_row_score = []
         for i in range(np.shape(yall)[1]):
-            match = self.rnn_wrapper.high_low_probability_score(yall, prediction, i)
-            high_row_score.append(match / len(yall))
+            match, total  = self.rnn_wrapper.high_low_probavility_score_with_border(yall, prediction, i)
+            high_row_score.append(f" {match} / {total} {(match + 0.0001) /(total + 0.0001)}%")
+            # self.save_plot(yall[:, i], prediction[:, i], f"high low prob top 100:{i}")
         return high_row_score
+
+    def save_plot(self, answer, prediction, name):
+        import matplotlib.pyplot as plt
+        import io
+        x = range(100)
+        y = answer[-100:]
+        pred_y = prediction[-100:]
+        plt.ylim(-0.1, 1.1)
+        plt.plot(x, [0.5]*len(y), label='border')
+        plt.plot(x, y, label='answer')
+        plt.plot(x, pred_y, label='prediction_prob')
+        plt.legend()
+
+        buffer = io.BytesIO()
+        plt.savefig(buffer, format='png')
+        buffer.seek(0)
+        image = self.rnn_wrapper.plot2image(buffer, 0)
+        self.rnn_wrapper.add_image2board(name, image)
+        plt.cla()
+        plt.clf()
+        plt.close('all')
 

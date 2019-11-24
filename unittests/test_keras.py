@@ -86,6 +86,7 @@ class RNNTestCase(unittest.TestCase):
 
     @AOPUnitTest()
     def test_predict(self):
+        import io
         technical = TAlibWrapper().get_technicals_of_series(self._data)
         pre = self.rnn_wrapper.preprocess(technical)
         pre = TAlibWrapper().add_high_low_data(pre)
@@ -93,15 +94,22 @@ class RNNTestCase(unittest.TestCase):
         model = self.rnn_wrapper.loadModelFfile()
         prediction = model.predict(Xall)
         import matplotlib.pyplot as plt
-        x = range(len(yall))
-        y = yall[:, 5]
-        pred_y = prediction[:, 5]
+        x = range(100)
+        y = yall[-100:, 5]
+        pred_y = prediction[-100:, 5]
         plt.ylim(-0.1, 1.1)
         plt.plot(x, [0.5]*len(y), label='border')
         plt.plot(x, y, label='answer')
         plt.plot(x, pred_y, label='prediction_prob')
-        plt.plot(x, yall[:, 0], label='price')
+        plt.plot(x, yall[-100:, 0], label='price')
         plt.legend()
+
+        buffer = io.BytesIO()
+        plt.savefig(buffer, format='png')
+        buffer.seek(0)
+        image = self.rnn_wrapper.plot2image(buffer, 0)
+        self.rnn_wrapper.add_image2board("image", image)
+
         plt.show()
 
     @AOPUnitTest()
@@ -125,6 +133,18 @@ class RNNTestCase(unittest.TestCase):
         prediction = model.predict(Xall)
         match = self.rnn_wrapper.high_low_probability_score(yall, prediction, 5)
         print(f"{match} / {len(yall)} {match/len(yall)}%")
+
+    @AOPUnitTest()
+    def test_high_low_probability_with_border(self):
+        technical = TAlibWrapper().get_technicals_of_series(self._data)
+        pre = self.rnn_wrapper.preprocess(technical)
+        pre = TAlibWrapper().add_high_low_data(pre)
+        Xall, yall = self.rnn_wrapper.make_data_and_label(pre)
+        model = self.rnn_wrapper.loadModelFfile()
+        prediction = model.predict(Xall)
+        match, total = self.rnn_wrapper.high_low_probavility_score_with_border(yall, prediction, 19)
+        print(f"all data count:{len(yall)}")
+        print(f"{match} / {total} {match/total}%")
 
     @AOPUnitTest()
     def test_rmse(self):
